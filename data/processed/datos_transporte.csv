@@ -1,0 +1,13 @@
+Concepto,Valor,Unidad,Fuente
+Inversion_Camion_Nuevo,55000,USD,Cotización Comercial Sector
+Capital_Trabajo_Inicial,5000,USD,Estimación Operativa
+Porcentaje_Financiamiento,0.70,Porcentaje,Crédito Pyme BCE
+Porcentaje_Capital_Propio,0.30,Porcentaje,Aporte de Socios
+Tasa_Interes_Anual,0.115,Porcentaje,Tasa Activa Efectiva BCE
+Plazo_Credito_Anios,5,Años,Condiciones Pyme
+Ingreso_Anual_Fletes,36000,USD,Promedio 12 viajes/mes
+Gasto_Combustible_Anual,8400,USD,Diésel industrial
+Mantenimiento_Anual,2200,USD,Preventivo y correctivo
+Seguros_y_Matricula,1500,USD,Anual
+Chofer_Sueldo_y_IESS,8400,USD,Tabla Sectorial IESS
+Tasa_Impuesto_Renta,0.25,Porcentaje,SRI Ecuador
