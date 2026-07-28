@@ -2,11 +2,17 @@
 
 **Institución:** Universidad Tecnica de Cotopaxi 
 Facultad de Ciencias Administrativas y Económicas
-  
+
 **Carrera:** Economía 
 **Docente:** Eco. Edwin Arcos
 **Autor:** Bryan Benalcázar C.   
 **Fecha:** 28 Julio 2026  
+
+---
+
+### 🌐 Accesos Directos a la Plataforma y Código
+* 📊 **Dashboard Interactivo (Vercel):** [https://proyecto-finanzas-transporte-ten.vercel.app](https://proyecto-finanzas-transporte-ten.vercel.app)
+* 💻 **Repositorio de Código (GitHub):** [https://github.com/bryanbenal-rgb/proyecto-finanzas-transporte](https://github.com/bryanbenal-rgb/proyecto-finanzas-transporte)
 
 ---
 

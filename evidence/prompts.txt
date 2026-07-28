@@ -1,0 +1,34 @@
+# Evidencia de uso de Inteligencia Artificial
+
+## Herramienta utilizada
+Microsoft Copilot (asistente IA)
+
+## Prompts principales
+1. Prompt: "Necesito realizar la tarea mediante este archivo pdf, crea el cuadro comparativo."
+   Respuesta: Se generó un cuadro comparativo de los indicadores financieros.
+
+2. Prompt: "Crea el código para calcular VAN y TIR en Python."
+   Respuesta: Se entregó un script en Python usando numpy-financial.
+
+3. Prompt: "Entregame todo el código solo para reemplazar el código antiguo."
+   Respuesta: Se generó el archivo completo `calculos.py` con WACC, VAN, TIR, Payback y sensibilidad.
+
+4. Prompt: "Explícame dónde colocar AGENTS.md."
+   Respuesta: Se indicó que va en la raíz del proyecto, junto a README.md y requirements.txt.
+
+## Ejemplos de respuestas aceptadas
+- Código en Python para cálculos financieros.
+- Explicación de estructura de carpetas.
+- Documento AGENTS.md con funciones de cada agente.
+
+## Ejemplos de respuestas corregidas o ajustadas
+- Se corrigió la instalación de librerías faltantes (numpy, numpy-financial).
+- Se ajustó la versión de AGENTS.md para que cumpla con la rúbrica.
+
+## Decisiones tomadas por el estudiante
+- Usar la versión completa de AGENTS.md.
+- Ejecutar el script en `src/analysis/calculos.py`.
+- Documentar evidencias en esta carpeta.
+
+## Reflexión sobre limitaciones de la IA
+La IA ayudó a generar código y documentación, pero fue necesario validar cálculos y adaptar la estructura a lo que pide la rúbrica. El estudiante es responsable de los resultados finales.
