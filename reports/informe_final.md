@@ -1,4 +1,14 @@
-# Proyecto Integrador: Análisis Financiero y Evaluación de Inversión en el Sector Transporte
+# PROYECTO INTEGRADOR: EVALUACIÓN FINANCIERA Y OPERACIONAL PARA LA RENOVACIÓN DE FLOTA DE TRANSPORTE PESADO EN ECUADOR
+
+**Institución:** Universidad Tecnica de Cotopaxi 
+Facultad de Ciencias Administrativas y Económicas
+  
+**Carrera:** Economía 
+**Docente:** Eco. Edwin Arcos
+**Autor:** Bryan Benalcázar C.   
+**Fecha:** 28 Julio 2026  
+
+---
 
 ## Resumen Ejecutivo
 
@@ -14,36 +24,69 @@ Bajo las condiciones reales del mercado ecuatoriano (fletes de ida TÍA/Chaide, 
 
 ---
 
+## Planteamiento del Desafío
+
+El sector de transporte de carga pesada en Ecuador enfrenta cuellos de botella operativos caracterizados por el envejecimiento del parque automotor, el incremento de costos en repuestos y el desgaste acelerado de neumáticos en rutas interprovinciales. El desafío central radica en determinar la factibilidad económica de reemplazar una unidad obsoleta por un vehículo nuevo de 8 toneladas, balanceando la inversión inicial frente a la eficiencia de combustible y decidiendo la asignación óptima de flota entre operaciones de carga pesada/peso completo (Cliente TÍA) y carga por volumen/peso moderado (Cliente Chaide).
+
+---
+
+## Objetivos
+
+### Objetivo General
+Evaluar la viabilidad económica, financiera e ingenieril para la renovación de un camión de carga pesada de 8 toneladas en Ecuador, mediante la formulación del modelo de Flujo de Caja Libre y la implementación de una herramienta de decisión interactiva desplegada en la nube.
+
+### Objetivos Específicos
+1. Calibrar los supuestos de ingresos y egresos operativos con datos reales de fletes (Planta Quito y TÍA) y costos de mantenimiento.
+2. Determinar la tasa de descuento óptima ($WACC$) integrando el escudo fiscal y el costo de oportunidad del capital.
+3. Desarrollar un análisis comparativo de marcas (Hino vs. Marcas Chinas) según la tipología de carga del cliente.
+4. Diseñar un sistema multiagente que automatice la proyección matemática, el informe técnico y el dashboard web.
+
+---
+
+## Descripción de los Datos
+
+Los datos primarios provienen de tarifarios oficiales de transporte y matrices de costos operativos del mercado ecuatoriano (2026):
+* **Fletes de Salida (Ida):** Tarifario Planta Quito y Centro de Distribución TÍA ($\$140.00\text{ USD}$ en rutas cortas/medianas y $\$388.00\text{ USD}$ a Guayaquil).
+* **Fletes de Retorno:** Consolidados de carga Guayaquil-Quito ($\$275.00\text{ USD/viaje}$).
+* **Insumos Operativos:** Diésel a $\$3.20/\text{galón}$, neumáticos a $\$160.00\text{ USD c/u}$ (juego de 6 unidades cada $7.5\text{ meses}$) y mantenimientos preventivos quincenales de $\$150.00\text{ USD}$.
+
+---
+
+## Metodología
+
+La metodología integra un enfoque mixto cuantitativo y de ingeniería financiera:
+1. **Modelación Financiera Discreta:** Proyección de flujos de caja operativos a 5 años descontados mediante el $WACC$.
+2. **Método de Múltiplos Comparables:** Valoración complementaria por $EV/EBITDA$ ($4.2\text{x}$).
+3. **Análisis de Sensibilidad Multivariable:** Evaluación de escenarios (+5%/-5% y -8%/+12%) sobre fletes y costos directos.
+4. **Desarrollo Agéntico Multiagente:** Coordinación de 3 agentes especializados para la generación del código en Python, informe Markdown y Dashboard en Next.js.
+
+---
+
+## Análisis Económico
+
+El análisis macroeconómico consideró las condiciones del segmento de transporte en Ecuador:
+* **Entorno Monetario:** Economía dolarizada que elimina el riesgo cambiario pero expone la operación a la inflación de costos en autopartes importadas ($5\%\text{ anual}$).
+* **Estructura Tributaria:** Tasa del Impuesto a la Renta de Sociedades del $25\%$ fijada por el SRI, permitiendo un escudo fiscal sobre los intereses del crédito Pyme y la depreciación lineal del activo ($20\%\text{ anual}$).
+
+---
+
 ## 1. Contexto Macroeconómico y Parámetros Financieros Base
 
 El modelo financiero incorpora la estructura tributaria y financiera vigente en Ecuador para el segmento de crédito comercial Pyme de transporte:
 
-* **Tasa Badlar / Referencial de Crédito Pyme:** $11.50\%$
-* **Tasa de Impuesto a la Renta (SRI):** $25.00\%$
-* **Costo Promedio Ponderado de Capital ($WACC$):** $10.24\%$
+* **Tasa Badlar / Referencial de Crédito Pyme ($K_d$):** $11.50\%$
+* **Tasa de Impuesto a la Renta ($T$ - SRI):** $25.00\%$
 * **Precio del Diésel:** $\$3.20/\text{galón}$
 * **Horizonte de Evaluación:** $5\text{ Años}$
 
 ### 1.1 Metodología de Cálculo del WACC (Costo Promedio Ponderado de Capital)
-
-El **Costo Promedio Ponderado de Capital ($WACC$)** representa la tasa mínima de rendimiento que el proyecto debe generar para satisfacer tanto el costo del financiamiento bancario como la rentabilidad exigida por el capital propio. Su cálculo ajusta el costo de la deuda mediante el escudo fiscal derivado de la deducibilidad de intereses sobre el Impuesto a la Renta ($25\%$), aplicando la fórmula estándar:
+El **$WACC$** se determina mediante la ponderación del costo de la deuda ajustado por el escudo fiscal y el costo de oportunidad del capital propio ($K_e$):
 
 $$WACC = w_d \cdot K_d \cdot (1 - T) + w_e \cdot K_e$$
 
-**Donde:**
-* $w_d = 60.00\%$: Proporción de financiamiento mediante crédito comercial Pyme.
-* $K_d = 11.50\%$: Tasa activa de interés bancario referencial Pyme.
-* $T = 25.00\%$: Tasa del Impuesto a la Renta (SRI).
-* $w_e = 40.00\%$: Proporción de aportación con capital propio.
-* $K_e = 12.62\%$: Tasa de rendimiento exigida al patrimonio ($CAPM$ ajustado por riesgo país).
+Considerando una estructura de capital de $60\%$ de endeudamiento ($w_d = 0.60$) a una tasa Pyme ($K_d = 11.50\%$) con ahorro tributario ($1 - T = 0.75$), y un $40\%$ de capital propio ($w_e = 0.40$) con un rendimiento exigido ($K_e = 12.62\%$), se obtiene la tasa de descuento oficial del proyecto:
 
-**Sustitución y Cálculo:**
-
-$$WACC = (0.60 \cdot 11.50\% \cdot [1 - 0.25]) + (0.40 \cdot 12.62\%)$$
-
-$$WACC = 5.175\% + 5.065\% = \mathbf{10.24\%}$$
-
-> **Justificación Metodológica:** La tasa de descuento resultante del **$10.24\%$** refleja la estructura óptima de capital para una Pyme de transporte en Ecuador. Al estar el $VAN$ ($\$21,778.43\text{ USD}$) descontado a esta tasa exacta y ser la $TIR$ ($22.15\%$) superior al $WACC$, se demuestra cuantitativamente la capacidad del proyecto para cubrir el servicio de la deuda y generar valor económico neto incremental.
+$$WACC = 0.60 \cdot 11.50\% \cdot (1 - 0.25) + 0.40 \cdot 12.62\% = 5.175\% + 5.065\% = \mathbf{10.24\%}$$
 
 ---
 
@@ -95,10 +138,11 @@ El **Valor de Salvamento** de **$\$18,000.00\text{ USD}$** registrado al final d
 | (+) Valor Salvamento Activo | - | - | - | - | - | $+\$18,000$ |
 | **Flujo de Caja Libre (FCFF)** | **$-\$60,000$** | **$\$17,900$** | **$\$18,658$** | **$\$19,150$** | **$\$19,327$** | **$\$37,138$** |
 
-### Indicadores Financieros Clave:
+### 4.1 Indicadores Financieros Clave:
 * **Valor Actual Neto ($VAN$ descontado al $WACC = 10.24\%$):** **$\$21,778.43\text{ USD}$**
 * **Tasa Interna de Retorno ($TIR$):** **$22.15\%$**
 * **Payback Descontado:** **$3.2\text{ Años}$**
+* **Criterio de Decisión:** Como $VAN > 0$ y $TIR (22.15\%) > WACC (10.24\%)$, el proyecto de renovación de la flota **se acepta**.
 
 ---
 
@@ -176,3 +220,28 @@ A partir de la evaluación técnica, operacional y financiera a un $WACC = 10.24
 > **Regla Estratégica de Flota:** *"Para operaciones de peso completo $\rightarrow$ Hino; para operaciones de volumen y peso moderado $\rightarrow$ Marca China"*.
 > 
 > **Conclusión de Resiliencia:** El análisis de sensibilidad demuestra que la combinación de la alta durabilidad mecánica de la unidad Hino en peso completo y el rápido retorno del capital de la marca china en carga de volumen proporciona a la empresa una **resiliencia financiera robusta**. Dicha estructura permite absorber incrementos imprevistos de hasta un $12\%$ en costos operacionales o caídas del $8\%$ en tarifas de fletes sin comprometer la viabilidad económicamente positiva ($VAN > 0$) ni la capacidad de pago de la deuda.
+
+---
+
+## Limitaciones
+
+1. **Dependencia de Subsidios:** El modelo asume estabilidad en el precio del diésel ($\$3.20/\text{galón}$).
+2. **Simetría de Flujos:** Se presupone una demanda constante de 20 viajes mensuales sin considerar paros patronales o cierres de vías prolongados.
+
+---
+
+## Referencias
+
+1. Banco Central del Ecuador (BCE). (2026). *Tasas de Interés Referenciales del Sistema Financiero*.
+2. Servicio de Rentas Internas (SRI). (2026). *Tabla de Depreciaciones y Régimen de Impuesto a la Renta*.
+3. Damodaran, A. (2025). *Capital Cost and Valuation Multiples for Emerging Markets*. Stern School of Business.
+
+---
+
+## Anexos Técnicos
+
+### Anexo A: Arquitectura Multiagente
+Ver archivo `AGENTS.md` en la raíz del repositorio.
+
+### Anexo B: Matriz de Prompts y Evidencias
+Ver archivo `evidence/bitacora_agentica.md` en la carpeta de evidencias.
