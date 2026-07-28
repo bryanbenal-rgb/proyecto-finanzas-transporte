@@ -65,3 +65,16 @@ $$WACC = (0.30 \times 14.00\%) + (0.70 \times 11.50\% \times (1 - 0.25)) = 10.24
 ## 6. Conclusiones y Recomendaciones
 1. Se recomienda llevar a cabo la adquisición de la unidad de transporte mediante el crédito Pyme al 11.5% de interés.
 2. La utilización del apalancamiento financiero potencia el rendimiento del patrimonio corporativo gracias al beneficio del escudo fiscal.
+## 5. Análisis Comparativo de Marcas y Exclusividad Operacional (Hino vs. Marcas Chinas)
+
+### 5.1 Criterio de Exclusividad Operacional
+Debido a la alta demanda de volumen y frecuencia de despachos tanto en **TÍA** como en **Chaide**, resulta inviable operativamente compartir una misma unidad para atender ambas cuentas. Cada camión debe asignarse de manera $100\%$ dedicada a una sola empresa.
+
+### 5.2 Evaluación Técnica y Financiera por Tipo de Carga
+* **Operación en TÍA (Carga Pesada / Peso Completo):** La exigencia de peso reduce el rendimiento de combustible en marcas chinas ($\approx 7.8 \text{ km/gal}$ frente a los $10 \text{ km/gal}$ de Hino) y acelera el desgaste mecánico. A pesar de una mayor inversión inicial ($\$60,000$ vs. $\$43,000$), la marca **Hino resulta superior en TÍA**, generando un $VAN$ de **$\$21,778.43 \text{ USD}$** frente a los **$\$14,822.32 \text{ USD}$** del camión chino.
+* **Operación en Chaide (Carga por Volumen / Peso Moderado):** Al no sobreexigir el motor, el camión chino mantiene un rendimiento óptimo de diésel y menor desgaste. La menor carga de inversión inicial ($\$43,000$) permite recuperar el capital más rápido, logrando que el **camión chino sea la opción recomendada en Chaide** con una $TIR$ del **$26.12\%$** y un $VAN$ de **$\$20,566.20 \text{ USD}$**.
+
+| Empresa / Cuenta | Marca Recomendada | Inversión Inicial | VAN ($WACC = 10.24\%$) | TIR (%) | Justificación Operativa |
+| :--- | :---: | :---: | :---: | :---: | :--- |
+| **TÍA** | **Hino (Japonés)** | $\$60,000$ | **$\$21,778.43$** | **$22.15\%$** | Resistente a peso completo, menor consumo diésel y mayor reventa. |
+| **Chaide** | **Marca China** | $\$43,000$ | **$\$20,566.20$** | **$26.12\%$** | Ideal para volumen, menor costo de entrada y rápido retorno. |

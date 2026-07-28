@@ -5,11 +5,11 @@ import { MetricCard, FlowChart } from './components';
 
 const dataFlujos = [
   { year: 'Año 0', flujo: -60000 },
-  { year: 'Año 1', flujo: 22625 },
-  { year: 'Año 2', flujo: 22625 },
-  { year: 'Año 3', flujo: 22625 },
-  { year: 'Año 4', flujo: 22625 },
-  { year: 'Año 5', flujo: 22625 },
+  { year: 'Año 1', flujo: 17900 },
+  { year: 'Año 2', flujo: 18658 },
+  { year: 'Año 3', flujo: 19150 },
+  { year: 'Año 4', flujo: 19327 },
+  { year: 'Año 5', flujo: 37138 }, // Incluye Salvamento ($18,000)
 ];
 
 export default function Dashboard() {
@@ -21,10 +21,10 @@ export default function Dashboard() {
       </header>
 
       <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(200px, 1fr))', gap: '16px' }}>
-        <MetricCard title="Inversión Inicial Total" value="$60,000 USD" status="neutral" description="70% Deuda Pyme / 30% Equity" />
+        <MetricCard title="Inversión Inicial Total" value="$60,000 USD" status="neutral" description="Hino 8 Ton / Operación Dedicada" />
         <MetricCard title="WACC (Costo Capital)" value="10.24%" status="neutral" description="Tasa de Descuento Exigida" />
-        <MetricCard title="VAN (Valor Actual Neto)" value="$26,243.50 USD" status="positive" description="Proyecto Viable (VAN > 0)" />
-        <MetricCard title="TIR (Tasa Interna)" value="21.58%" status="positive" description="Supera al WACC (21.58% > 10.24%)" />
+        <MetricCard title="VAN (Valor Actual Neto)" value="$21,778.43 USD" status="positive" description="Proyecto Viable (VAN > 0)" />
+        <MetricCard title="TIR (Tasa Interna)" value="22.15%" status="positive" description="Supera al WACC (22.15% > 10.24%)" />
       </div>
 
       <div style={{ marginTop: '32px', backgroundColor: '#ffffff', padding: '24px', borderRadius: '8px', border: '1px solid #e2e8f0' }}>
