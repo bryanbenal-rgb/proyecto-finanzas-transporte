@@ -115,6 +115,7 @@ Además de las variaciones internas de costos, el proyecto enfrenta los siguient
 * **Riesgo Volatilidad de Combustible:** Posibles ajustes al precio del diésel por políticas de subsidios gubernamentales en Ecuador.
 * **Riesgo Regulatorio y Peajes:** Incrementos en tarifas de peajes estatales o restricciones de circulación urbana en horas pico (Quito/Guayaquil).
 * **Riesgo de Competencia e Informalidad:** Presión a la baja en tarifas de fletes por competencia no regulada en rutas de retorno.
+* **Riesgo de Mercado y Volatilidad en la Demanda:** Variaciones estacionales en el volumen de carga agrícola e industrial en Ecuador que pueden generar caídas temporales en la frecuencia de viajes mensuales o reducción en las tarifas de fletes de retorno.
 
 ---
 
@@ -126,3 +127,5 @@ A partir de la evaluación técnica, operacional y financiera a un $WACC = 10.24
 2. **Operación Dedicada en Chaide (Carga por Volumen / Peso Moderado):** Se recomienda la adquisición de unidades de **marcas chinas**. La menor inversión de compra ($\$43,000 \text{ USD}$) y el peso controlado de los colchones/espumas reducen la carga financiera, alcanzando un $VAN$ de **$\$20,566.20 \text{ USD}$** y una $TIR$ del **$26.12\%$**.
 
 > **Regla Estratégica de Flota:** *"Para operaciones de peso completo $\rightarrow$ Hino; para operaciones de volumen y peso moderado $\rightarrow$ Marca China"*.
+> 
+> **Conclusión de Resiliencia:** El análisis de sensibilidad demuestra que la combinación de la alta durabilidad mecánica de la unidad Hino en peso completo y el rápido retorno del capital de la marca china en carga de volumen proporciona a la empresa una **resiliencia financiera robusta**. Dicha estructura permite absorber incrementos imprevistos de hasta un $12\%$ en costos operacionales o caídas del $8\%$ en tarifas de fletes sin comprometer la viabilidad económicamente positiva ($VAN > 0$) ni el pago de la deuda.
