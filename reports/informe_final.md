@@ -30,6 +30,29 @@ $$WACC = \left( \frac{E}{V} \times K_e \right) + \left( \frac{D}{V} \times K_d \
 
 $$WACC = (0.30 \times 14.00\%) + (0.70 \times 11.50\% \times (1 - 0.25)) = 10.24\%$$
 
+### 3.1 Supuestos de Ingresos y Rutas Mensuales
+
+Los ingresos proyectados del Año 1 (**$\$58,700 \text{ USD}$**) se fundamentan en una operación dedicada de $20 \text{ días/mes}$ ($240 \text{ viajes/año}$), con un recorrido promedio estimado de $4,200 \text{ km/mes}$:
+
+1. **Rutas Cortas y Medianas (16 viajes/mes):** Entregas en Pichincha, Imbabura, Cotopaxi y Tungurahua con un flete promedio de $\$140 \text{ USD/viaje}$ ($\$2,240 \text{ USD/mes} \rightarrow \$26,880 \text{ USD/año}$).
+2. **Rutas Largas / Interprovinciales (4 viajes/mes a Guayaquil):** Flete de ida desde Quito a Guayaquil por $\$388 \text{ USD}$ + flete de retorno consolidado (Guayaquil-Quito/Ibarra) por $\$275 \text{ USD}$ ($\$663 \text{ USD/viaje redondo} \rightarrow \$31,824 \text{ USD/año}$).
+
+### 3.2 Desglose Completo de Costos Operativos Directos (Año 1)
+
+Para garantizar la transparencia del modelo, los costos operativos anuales de la unidad Hino de 8 toneladas ($\$38,500 \text{ USD}$) se desglosan de la siguiente manera:
+
+* **Combustible (Diésel a $\$3.20/\text{gal}$):** $\$19,968 \text{ USD}$ (consumo promedio de $520 \text{ galones/mes}$ en $20 \text{ viajes}$).
+* **Chofer y Viáticos:** $\$10,800 \text{ USD}$ (Sueldo de $\$700/\text{mes}$ + beneficios de ley + viáticos de $\$10/\text{día}$ intraprovincial y $\$15/\text{día}$ interprovincial).
+* **Mantenimiento Preventivo y Lubricantes:** $\$3,600 \text{ USD}$ (cambio de aceite y filtros de $\$150 \text{ USD}$ realizado cada $15 \text{ días}$).
+* **Neumáticos / Llantas:** $\$1,536 \text{ USD}$ (juego de 6 llantas a $\$160 \text{ c/u} = \$960 \text{ USD}$, reemplazado cada $7.5 \text{ meses}$).
+* **Seguros, Peajes e Impuestos:** $\$2,596 \text{ USD}$ (poliza de seguro contra accidentes, peajes Panamericana $\$2/\text{estación}$, matrícula y Revisión Técnica Vehicular RTV).
+
+### 3.3 Justificación del Valor de Salvamento
+
+El **Valor de Salvamento** de **$\$18,000 \text{ USD}$** registrado al final del Año 5 corresponde al **$32.7\%$ del valor inicial del activo** ($\$55,000 \text{ USD}$). 
+
+Esta estimación se fundamenta en el mercado secundario de reventa de vehículos comerciales pesados en Ecuador: la marca **Hino** mantiene un alto valor de reventa comercial tras 5 años de uso debido a la disponibilidad de repuestos, la resistencia estructural de su chasis y la alta demanda en el sector del transporte de carga.
+
 ---
 
 ## 4. Proyección de Flujos de Caja Libre (FCFF) y Resultados
@@ -82,3 +105,24 @@ Debido a la alta demanda de volumen y frecuencia de despachos tanto en **TÍA** 
 | :--- | :---: | :---: | :---: | :---: | :--- |
 | **TÍA** | **Hino (Japonés)** | $\$60,000$ | **$\$21,778.43$** | **$22.15\%$** | Resistente a peso completo, menor consumo diésel y mayor reventa. |
 | **Chaide** | **Marca China** | $\$43,000$ | **$\$20,566.20$** | **$26.12\%$** | Ideal para volumen, menor costo de entrada y rápido retorno. |
+
+---
+
+### 6.2 Riesgos Operativos y Variables Externas
+
+Además de las variaciones internas de costos, el proyecto enfrenta los siguientes riesgos externos:
+
+* **Riesgo Volatilidad de Combustible:** Posibles ajustes al precio del diésel por políticas de subsidios gubernamentales en Ecuador.
+* **Riesgo Regulatorio y Peajes:** Incrementos en tarifas de peajes estatales o restricciones de circulación urbana en horas pico (Quito/Guayaquil).
+* **Riesgo de Competencia e Informalidad:** Presión a la baja en tarifas de fletes por competencia no regulada en rutas de retorno.
+
+---
+
+## 7. Conclusión y Recomendación Estratégica Final
+
+A partir de la evaluación técnica, operacional y financiera a un $WACC = 10.24\%$, se concluye:
+
+1. **Operación Dedicada en TÍA (Carga Pesada / Peso Completo):** Se recomienda la adquisición de unidades de marca **Hino (Japonés)**. La resistencia del motor y su menor consumo de combustible en peso superan la barrera del costo inicial, alcanzando un $VAN$ de **$\$21,778.43 \text{ USD}$** y una $TIR$ de **$22.15\%$**.
+2. **Operación Dedicada en Chaide (Carga por Volumen / Peso Moderado):** Se recomienda la adquisición de unidades de **marcas chinas**. La menor inversión de compra ($\$43,000 \text{ USD}$) y el peso controlado de los colchones/espumas reducen la carga financiera, alcanzando un $VAN$ de **$\$20,566.20 \text{ USD}$** y una $TIR$ del **$26.12\%$**.
+
+> **Regla Estratégica de Flota:** *"Para operaciones de peso completo $\rightarrow$ Hino; para operaciones de volumen y peso moderado $\rightarrow$ Marca China"*.
