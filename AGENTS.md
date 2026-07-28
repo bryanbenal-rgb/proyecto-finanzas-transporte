@@ -1,60 +1,91 @@
-# Arquitectura y Protocolo del Sistema Multiagente
+# AGENTS.md
 
-## 1. Objetivo General del Sistema
-El objetivo principal del sistema multiagente es automatizar y validar el análisis de factibilidad técnica, operacional y financiera para la renovación de flota de carga pesada en Ecuador (8 Toneladas), integrando modelos matemáticos en Python, documentación ejecutiva en Markdown/PDF y un Dashboard interactivo en Next.js desplegado en Vercel.
-
----
-
-## 2. Función de Cada Agente
-+-----------------------------------+
-                  |      AGENTE ANALISTA FINANCIERO   |
-                  |  (FCFF, WACC 10.24%, VAN, TIR)    |
-                  +-----------------+-----------------+
-                                    |
-                                    v
-                  +-----------------+-----------------+
-                  |      AGENTE GESTOR LOGÍSTICO      |
-                  | (Fletes TÍA/Chaide, Diésel)       |
-                  +-----------------+-----------------+
-                                    |
-                                    v
-                  +-----------------+-----------------+
-                  |     AGENTE DESARROLLADOR WEB      |
-                  | (Dashboard Next.js / Vercel API)  |
-                  +-----------------------------------+
-
-### 1. Agente Analista Financiero (`agent_finance`)
-* **Rol:** Modelación cuantitativa y matemática.
-* **Funciones:** Cálculo del $WACC$ ($10.24\%$), Flujo de Caja Libre ($FCFF$), $VAN$ ($\$21,778.43\text{ USD}$), $TIR$ ($22.15\%$), Payback, razones financieras (ROA, ROE, ROS) y valoración por múltiplos $EV/EBITDA$.
-
-### 2. Agente Gestor Logístico (`agent_logistics`)
-* **Rol:** Validación operativa de campo y estructura de costos.
-* **Funciones:** Procesamiento de tarifarios reales (Planta Quito y Centro de Distribución TÍA 2026), rutas de retorno Guayaquil-Quito, consumo de diésel ($3.20/\text{gal}$), viáticos y desgaste de llantas cada 7.5 meses.
-
-### 3. Agente Desarrollador Web (`agent_dev`)
-* **Rol:** Implementación de interfaz y despliegue continuo.
-* **Funciones:** Construcción de componentes en Next.js/React (`src/app/page.jsx`), diseño de gráficos de flujo y automatización del *deployment* en Vercel vía GitHub.
+## Objetivo General del Sistema Multiagente
+El sistema multiagente tiene como finalidad coordinar el análisis económico, financiero y de ingeniería económica aplicado al sector transporte, garantizando que cada agente especializado cumpla una función clara y verificable. La arquitectura asegura transparencia, validación de cálculos y generación de un dashboard interactivo en Vercel.
 
 ---
 
-## 3. Secuencia de Trabajo y Comunicación Inter-Agente
+## Función de Cada Agente
 
-1. **Fase 1 (Captura de Datos):** `agent_logistics` procesa la matriz de fletes reales y determina la estructura de ingresos ($\$58,700\text{ USD}$) y costos directos ($\$38,500\text{ USD}$).
-2. **Fase 2 (Modelación Financiera):** `agent_finance` recibe los inputs logísticos, corre el modelo en Python (`modelo_financiero.py`) y genera las métricas $VAN$, $TIR$ y $FCFF$.
-3. **Fase 3 (Sincronización Web):** `agent_dev` consume los outputs de `agent_finance` e implementa los cambios en el Dashboard de Next.js, sincronizando el informe en Markdown/PDF.
+### 1. Agente Coordinador
+- **Responsabilidad:** Divide el problema en tareas, asigna roles y verifica la integración final.
+- **Entradas:** Desafío empresarial, objetivos del proyecto.
+- **Salidas:** Plan de trabajo, integración de resultados.
+
+### 2. Investigador Económico
+- **Responsabilidad:** Analiza entorno macroeconómico, sectorial y competitivo.
+- **Entradas:** Datos de mercado, políticas tributarias, precios de insumos.
+- **Salidas:** Informe de contexto económico.
+
+### 3. Analista de Datos
+- **Responsabilidad:** Recolecta, limpia y valida bases de datos.
+- **Entradas:** Fuentes oficiales (BCE, SRI, INEC).
+- **Salidas:** Dataset procesado y diccionario de variables.
+
+### 4. Analista Financiero
+- **Responsabilidad:** Calcula razones financieras, estructura de financiamiento y WACC.
+- **Entradas:** Estados financieros, costos operativos, tasas de interés.
+- **Salidas:** Ratios financieros, cálculo del WACC.
+
+### 5. Ingeniero Económico
+- **Responsabilidad:** Aplica VAN, TIR, beneficio/costo, recuperación y sensibilidad.
+- **Entradas:** Flujos de caja proyectados.
+- **Salidas:** Indicadores de viabilidad económica.
+
+### 6. Agente de Valoración
+- **Responsabilidad:** Estima el valor empresarial mediante métodos de descuento y múltiplos.
+- **Entradas:** FCFF, EBITDA, múltiplos sectoriales.
+- **Salidas:** Valor empresarial estimado.
+
+### 7. Auditor de Riesgos
+- **Responsabilidad:** Revisa supuestos, cálculos, inconsistencias y riesgos.
+- **Entradas:** Resultados de todos los agentes.
+- **Salidas:** Informe de riesgos y validación de supuestos.
+
+### 8. Agente de Visualización
+- **Responsabilidad:** Construye y verifica el dashboard interactivo.
+- **Entradas:** Resultados financieros y económicos.
+- **Salidas:** Dashboard en Vercel con indicadores clave.
 
 ---
 
-## 4. Reglas de Validación y Resolución de Contradicciones
-
-* **Regla de Consistencia de Cifras:** Las métricas clave ($VAN$, $TIR$, $WACC$) deben coincidir exactamente entre el script de Python, el documento PDF y el Dashboard Web.
-* **Regla de Signos en FCFF:** Todos los costos y depreciaciones operativas se presentan con signo negativo ($-$), mientras que la depreciación como escudo fiscal recuperado en el $FCFF$ se mantiene estrictamente positiva ($+$).
-* **Resolución de Incompatibilidad por Tipo de Carga:** Si un vehículo opera en carga pesada (TÍA), prevalece la durabilidad del Hino; si opera en volumen moderado (Chaide), prevalece la menor inversión inicial del vehículo chino.
+## Secuencia de Trabajo
+1. **Coordinador** define el desafío y asigna tareas.  
+2. **Investigador Económico** analiza el entorno.  
+3. **Analista de Datos** prepara la base de datos.  
+4. **Analista Financiero** calcula ratios y WACC.  
+5. **Ingeniero Económico** proyecta flujos y calcula VAN/TIR.  
+6. **Agente de Valoración** aplica métodos adicionales.  
+7. **Auditor de Riesgos** valida resultados y supuestos.  
+8. **Visualización** despliega el dashboard en Vercel.  
 
 ---
 
-## 5. Decisiones Tomadas por el Coordinador del Proyecto
+## Comunicación entre Agentes
+- Los agentes comparten resultados mediante archivos en la carpeta `data/processed/`.  
+- El **Coordinador** centraliza la información en `reports/`.  
+- El **Auditor de Riesgos** revisa y retroalimenta a todos los agentes antes de la integración final.  
 
-1. **Inclusión de Fletes de Retorno:** Se incorporaron los retornos Guayaquil-Quito ($\$275\text{ USD/viaje}$) para reflejar la rentabilidad real de la operación interprovincial.
-2. **Exclusividad Operacional:** Se definió que un camión no puede compartir rutas entre TÍA y Chaide simultáneamente debido a la alta demanda de despachos.
-3. **Mantenimiento Progresivo:** Se estableció un incremento anual del $5\%$ en costos operativos para modelar el desgaste mecánico proyectado a 5 años.
+---
+
+## Reglas de Validación
+- Todo cálculo debe estar reproducible en código.  
+- Los datos deben provenir de fuentes verificables (BCE, SRI, INEC, etc.).  
+- Supuestos simulados deben estar claramente identificados.  
+- El auditor valida consistencia y coherencia antes de la recomendación final.  
+
+---
+
+## Criterios para Resolver Contradicciones
+- Priorizar fuentes oficiales sobre estimaciones.  
+- En caso de discrepancia entre agentes, el **Auditor de Riesgos** decide con base en evidencia.  
+- El **Coordinador** documenta la decisión en `evidence/`.  
+
+---
+
+## Intervenciones y Decisiones del Estudiante
+- Definición del desafío: renovación de flota de transporte.  
+- Selección de fuentes de datos y supuestos operativos.  
+- Validación de cálculos de VAN, TIR y WACC.  
+- Decisión estratégica final: Hino para peso completo, marca china para volumen moderado.  
+- Implementación del dashboard en Vercel.  
