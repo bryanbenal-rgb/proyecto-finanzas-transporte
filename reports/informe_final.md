@@ -34,22 +34,26 @@ $$WACC = (0.30 \times 14.00\%) + (0.70 \times 11.50\% \times (1 - 0.25)) = 10.24
 
 ## 4. Proyección de Flujos de Caja Libre (FCFF) y Resultados
 
+A partir del análisis de tarifarios reales (TÍA/Chaide), fletes de retorno (Guayaquil-Quito $\$250-\$300$), diésel ($\$3.20/\text{gal}$), mantenimiento quincenal ($\$150$) y cambio de llantas cada 7.5 meses ($\$960$), se proyecta la siguiente estructura dinámica de flujos:
+
 | Concepto | Año 0 | Año 1 | Año 2 | Año 3 | Año 4 | Año 5 |
 | :--- | :---: | :---: | :---: | :---: | :---: | :---: |
-| Ingresos por Fletes | - | \$36,000 | \$36,000 | \$36,000 | \$36,000 | \$36,000 |
-| Costos Operativos | - | -\$20,500 | -\$20,500 | -\$20,500 | -\$20,500 | -\$20,500 |
-| Depreciación | - | -\$11,000 | -\$11,000 | -\$11,000 | -\$11,000 | -\$11,000 |
-| **Utilidad Operativa (EBIT)** | - | **\$4,500** | **\$4,500** | **\$4,500** | **\$4,500** | **\$4,500** |
-| Impuesto a la Renta (25%) | - | -\$1,125 | -\$1,125 | -\$1,125 | -\$1,125 | -\$1,125 |
-| **Utilidad Neta Operativa** | - | **\$3,375** | **\$3,375** | **\$3,375** | **\$3,375** | **\$3,375** |
-| (+) Depreciación | - | \$11,000 | \$11,000 | \$11,000 | \$11,000 | \$11,000 |
-| **Flujo de Caja Libre (FCFF)** | **-\$60,000** | **\$22,625** | **\$22,625** | **\$22,625** | **\$22,625** | **\$22,625** |
+| **Ingresos por Fletes (Ida + Retorno)** | - | $\$58,700$ | $\$61,635$ | $\$64,716$ | $\$67,952$ | $\$71,350$ |
+| **Costos Operativos Directos** | - | $-\$38,500$ | $-\$40,425$ | $-\$42,850$ | $-\$45,850$ | $-\$49,500$ |
+| **Depreciación Lineal ($11,000/año)** | - | $-\$11,000$ | $-\$11,000$ | $-\$11,000$ | $-\$11,000$ | $-\$11,000$ |
+| **Utilidad Operativa (EBIT)** | - | **$\$9,200$** | **$\$10,210$** | **$\$10,866$** | **$\$11,102$** | **$\$10,850$** |
+| Impuesto a la Renta (25%) | - | $-\$2,300$ | $-\$2,553$ | $-\$2,717$ | $-\$2,776$ | $-\$2,713$ |
+| **Utilidad Neta Operativa** | - | **$\$6,900$** | **$\$7,658$** | **$\$8,150$** | **$\$8,327$** | **$\$8,138$** |
+| (+) Depreciación | - | $\$11,000$ | $\$11,000$ | $\$11,000$ | $\$11,000$ | $\$11,000$ |
+| (+) Valor Salvamento Activo | - | - | - | - | - | $\$18,000$ |
+| **Flujo de Caja Libre (FCFF)** | **$-\$60,000$** | **$\$17,900$** | **$\$18,658$** | **$\$19,150$** | **$\$19,327$** | **$\$37,138$** |
 
 ### Indicadores Financieros Clave:
-* **$VAN$ (descontado al WACC 10.24%):** **\$26,243.50 USD**
-* **$TIR$:** **21.58%**
-* **Payback Descontado:** 3.1 Años
-* **Criterio de Decisión:** Como $VAN > 0$ y $TIR > WACC$, el proyecto se **acepta**.
+
+* **$VAN$ (descontado al WACC 10.24%):** **$\$21,778.43 \text{ USD}$**
+* **$TIR$:** **$22.15\%$**
+* **Payback Descontado:** **3.2 Años**
+* **Criterio de Decisión:** Como $VAN > 0$ y $TIR (22.15\%) > WACC (10.24\%)$, el proyecto de renovación de la flota **se acepta**.
 
 ---
 
