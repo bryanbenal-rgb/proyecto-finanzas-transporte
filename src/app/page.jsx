@@ -9,7 +9,7 @@ const dataFlujos = [
   { year: 'Año 2', flujo: 18658 },
   { year: 'Año 3', flujo: 19150 },
   { year: 'Año 4', flujo: 19327 },
-  { year: 'Año 5', flujo: 37138 }, // Incluye Salvamento ($18,000 USD)
+  { year: 'Año 5', flujo: 37138 },
 ];
 
 export default function Dashboard() {
@@ -38,11 +38,11 @@ export default function Dashboard() {
       <div style={{ marginTop: '24px', backgroundColor: '#ffffff', padding: '24px', borderRadius: '8px', border: '1px solid #e2e8f0' }}>
         <h3 style={{ fontSize: '16px', color: '#0f172a', marginTop: 0 }}>💡 Conclusión Comparativa y Regla Estratégica de Flota</h3>
         <p style={{ fontSize: '14px', color: '#334155', lineHeight: '1.6' }}>
-          Debido a la alta demanda operacional, cada vehículo opera de manera $100\%$ dedicada. La viabilidad técnica/financiera determina:
+          Debido a la alta demanda operacional, cada vehículo opera de manera 100% dedicada. La viabilidad técnica/financiera determina:
         </p>
         <ul style={{ fontSize: '14px', color: '#334155', lineHeight: '1.8' }}>
-          <li><strong>Operaciones en TÍA (Carga Pesada / Peso Completo):</strong> Recomendado <strong>Hino (Japonés)</strong>. $VAN = \$21,778.43 \text{ USD}$, $TIR = 22.15\%$. Su resistencia minimiza el consumo de diésel y mantiene un alto valor de reventa.</li>
-          <li><strong>Operaciones en Chaide (Carga por Volumen / Peso Moderado):</strong> Recomendado <strong>Marca China</strong>. $VAN = \$20,566.20 \text{ USD}$, $TIR = 26.12\%$. Su menor precio de compra ($\$43,000 \text{ USD}$) acelera la recuperación de capital.</li>
+          <li><strong>Operaciones en TÍA (Carga Pesada / Peso Completo):</strong> Recomendado <strong>Hino (Japonés)</strong>. VAN = $21,778.43 USD, TIR = 22.15%. Su resistencia minimiza el consumo de diésel y mantiene un alto valor de reventa.</li>
+          <li><strong>Operaciones en Chaide (Carga por Volumen / Peso Moderado):</strong> Recomendado <strong>Marca China</strong>. VAN = $20,566.20 USD, TIR = 26.12%. Su menor precio de compra ($43,000 USD) acelera la recuperación de capital.</li>
         </ul>
       </div>
     </div>
