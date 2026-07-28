@@ -34,6 +34,7 @@ export default function Dashboard() {
     </div>
   );
 }
+
 import React from 'react';
 import { MetricCard, FlowChart } from './components';
 
