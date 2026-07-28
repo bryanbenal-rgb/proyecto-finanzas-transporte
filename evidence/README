@@ -1,0 +1,7 @@
+# Evidencias del Proyecto Financiero y Logístico
+
+Esta carpeta contiene los archivos de evidencia primaria utilizados para la calibración del modelo financiero:
+
+1. `CamScanner 08-01-2026 09.08.pdf`: Tarifario oficial de fletes de salida desde Planta Quito.
+2. `precio tia.xlsx`: Matriz de distancias, kilometraje y tarifas del Centro de Distribución TÍA 2026.
+3. Capturas del dashboard activo desplegado en Vercel.
