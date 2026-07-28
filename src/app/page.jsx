@@ -9,7 +9,7 @@ const dataFlujos = [
   { year: 'Año 2', flujo: 18658 },
   { year: 'Año 3', flujo: 19150 },
   { year: 'Año 4', flujo: 19327 },
-  { year: 'Año 5', flujo: 37138 }, // Incluye Salvamento ($18,000)
+  { year: 'Año 5', flujo: 37138 },
 ];
 
 export default function Dashboard() {
