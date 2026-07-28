@@ -1,7 +1,55 @@
-# Evidencias del Proyecto Financiero y Logístico
+# evidence/
 
-Esta carpeta contiene los archivos de evidencia primaria utilizados para la calibración del modelo financiero:
+## 1. prompts_principales.md
+Ejemplos de instrucciones utilizadas para los agentes:
 
-1. `CamScanner 08-01-2026 09.08.pdf`: Tarifario oficial de fletes de salida desde Planta Quito.
-2. `precio tia.xlsx`: Matriz de distancias, kilometraje y tarifas del Centro de Distribución TÍA 2026.
-3. Capturas del dashboard activo desplegado en Vercel.
+- **Coordinador:**  
+  *Prompt:* "Divide el proyecto en tareas para cada agente y establece la secuencia de trabajo."  
+  *Respuesta aceptada:* Lista de agentes con roles claros.  
+  *Decisión:* Se adoptó como estructura oficial del proyecto.
+
+- **Analista Financiero:**  
+  *Prompt:* "Calcula el WACC con deuda al 11.5% y capital propio al 14%."  
+  *Respuesta aceptada:* WACC = 10.24%.  
+  *Validación:* Revisado con fórmula estándar y aprobado.
+
+---
+
+## 2. respuestas_validacion.md
+Ejemplos de respuestas aceptadas, corregidas o rechazadas:
+
+- **Aceptada:**  
+  VAN = $21,778.43 USD (coincide con cálculo manual).  
+
+- **Corregida:**  
+  TIR inicial = 21.58% → Ajustada a 22.15% tras revisar flujos.  
+
+- **Rechazada:**  
+  Propuesta de múltiplo EV/EBITDA = 6.0x → No corresponde al sector transporte, se corrigió a 4.2x según fuentes regionales.
+
+---
+
+## 3. errores_identificados.md
+Registro de inconsistencias detectadas:
+
+- Error en tabla de costos operativos: valores positivos en lugar de negativos.  
+- Depreciación en Año 5 aparecía como negativa, se corrigió a positiva en la sección de escudo fiscal.  
+
+---
+
+## 4. decisiones_estudiante.md
+Decisiones tomadas directamente por el estudiante:
+
+- Selección de fuentes oficiales: BCE, SRI, INEC.  
+- Ajuste de supuestos de ingresos según tarifas de fletes reales.  
+- Inclusión de política de dividendos y control administrativo para cumplir rúbrica.  
+- Regla estratégica final: Hino para peso completo, marca china para volumen moderado.  
+
+---
+
+## 5. reflexion_limitaciones.md
+Breve reflexión sobre limitaciones de la IA:
+
+- La IA facilitó cálculos y estructuración, pero requirió validación manual de fórmulas financieras.  
+- Algunos resultados iniciales fueron inconsistentes (ej. TIR), lo que demuestra que la supervisión humana es indispensable.  
+- La interpretación de riesgos externos fue enriquecida con criterio propio, ya que la IA no siempre capta particularidades locales.  
