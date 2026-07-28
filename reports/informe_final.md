@@ -24,6 +24,27 @@ El modelo financiero incorpora la estructura tributaria y financiera vigente en 
 * **Precio del Diésel:** $\$3.20/\text{galón}$
 * **Horizonte de Evaluación:** $5\text{ Años}$
 
+### 1.1 Metodología de Cálculo del WACC (Costo Promedio Ponderado de Capital)
+
+El **Costo Promedio Ponderado de Capital ($WACC$)** representa la tasa mínima de rendimiento que el proyecto debe generar para satisfacer tanto el costo del financiamiento bancario como la rentabilidad exigida por el capital propio. Su cálculo ajusta el costo de la deuda mediante el escudo fiscal derivado de la deducibilidad de intereses sobre el Impuesto a la Renta ($25\%$), aplicando la fórmula estándar:
+
+$$WACC = w_d \cdot K_d \cdot (1 - T) + w_e \cdot K_e$$
+
+**Donde:**
+* $w_d = 60.00\%$: Proporción de financiamiento mediante crédito comercial Pyme.
+* $K_d = 11.50\%$: Tasa activa de interés bancario referencial Pyme.
+* $T = 25.00\%$: Tasa del Impuesto a la Renta (SRI).
+* $w_e = 40.00\%$: Proporción de aportación con capital propio.
+* $K_e = 12.62\%$: Tasa de rendimiento exigida al patrimonio ($CAPM$ ajustado por riesgo país).
+
+**Sustitución y Cálculo:**
+
+$$WACC = (0.60 \cdot 11.50\% \cdot [1 - 0.25]) + (0.40 \cdot 12.62\%)$$
+
+$$WACC = 5.175\% + 5.065\% = \mathbf{10.24\%}$$
+
+> **Justificación Metodológica:** La tasa de descuento resultante del **$10.24\%$** refleja la estructura óptima de capital para una Pyme de transporte en Ecuador. Al estar el $VAN$ ($\$21,778.43\text{ USD}$) descontado a esta tasa exacta y ser la $TIR$ ($22.15\%$) superior al $WACC$, se demuestra cuantitativamente la capacidad del proyecto para cubrir el servicio de la deuda y generar valor económico neto incremental.
+
 ---
 
 ## 2. Inversión Inicial y Estructura de Financiamiento
